@@ -1,18 +1,24 @@
-useEffect(() => {
-    const fetchRFPs = async () => {
-      try {
-        const response = await fetch('/api/clinicaltrials'); // Ensure this is correct
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        console.log('API Data:', data);
-        setRFPs(data);
-      } catch (err) {
-        console.error('Error fetching RFPs:', err);
-        setError('Failed to fetch clinical trials. Please try again later.');
-      }
-    };
-  
-    fetchRFPs();
-  }, []);
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+
+const LandingPage = () => {
+  const apis = [
+    { name: 'ClinicalTrials.gov', link: '/clinicaltrials' },
+    { name: 'NIH ExPORTER', link: '/nih-exporter' },
+  ];
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <h1>Clinical Trial RFP APIs</h1>
+      <ul>
+        {apis.map((api) => (
+          <li key={api.name}>
+            <Link href={api.link}>{api.name}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default LandingPage;

@@ -1,0 +1,32 @@
+/* Antidote-API_JS-Connect.css */
+
+body{
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	margin-top: 0px;
+	background-color: #F2F2F2;
+	text-shadow: 0px 1px 0px #FFF;
+	margin: 5px;
+}
+
+table{
+	margin-left: 0px;
+	margin-right: auto;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 13px;
+}
+
+td{
+	padding: 0px;
+}
+
+td.menu:hover{
+	box-shadow: 0px 0px 10px rgba(142,199,31,1), 0px 0px 0px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 0px 10px rgba(142,199,31,1), 0px 0px 0px 1px rgba(0,0,0,0.1);
+}
+
+button.boutonAntidote {
+	border:0px;
+	background:none;
+}

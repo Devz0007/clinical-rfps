@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  publicRuntimeConfig: {
+    staticFolder: '/public', // Ensure access to public assets
+  },
 };
 
 export default nextConfig;
